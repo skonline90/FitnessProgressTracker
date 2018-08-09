@@ -4,9 +4,8 @@ import com.github.skonline90.controller.ApplicationProperties;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.TreeItem;
-import javafx.scene.control.TreeView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class FptGUI extends Application
@@ -20,10 +19,15 @@ public class FptGUI extends Application
         primaryStage.setScene(scene);
         
         NavigationBar navi = new NavigationBar();
+        ButtonBar buttons = new ButtonBar();
+        
+        VBox vbox = new VBox();
+        vbox.getChildren().addAll(navi, buttons);
+        vbox.setSpacing(10);
 
         
        
-        borderPane.setLeft(navi);
+        borderPane.setLeft(vbox);
         
         
         setUiProperties(primaryStage);

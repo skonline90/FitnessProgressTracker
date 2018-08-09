@@ -21,19 +21,11 @@ public class NavigationBar extends VBox
     private final TreeItem<String> tiPainExercise = new TreeItem<>();
     private final TreeView<String> navigationTree = new TreeView<>();
 
-    private final Button btnAdd = new Button("+");
-    private final Button btnDetails = new Button("Details");
-
-    HBox hboxBtns = new HBox();
-
     public NavigationBar()
     {
         createTreeStructure();
-        createButtonHBox();
 
         getChildren().add(navigationTree);
-        getChildren().add(hboxBtns);
-        setSpacing(10);
     }
 
     private void createTreeStructure()
@@ -54,12 +46,5 @@ public class NavigationBar extends VBox
             .add(tiMachineExercise);
         treeRoot.getChildren()
             .add(tiPainExercise);
-    }
-
-    private void createButtonHBox()
-    {
-        hboxBtns.getChildren()
-            .addAll(btnDetails, btnAdd);
-        hboxBtns.setSpacing(10);
     }
 }
