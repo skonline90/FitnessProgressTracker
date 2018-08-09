@@ -1,4 +1,4 @@
-package java.main;
+package java.com.github.skonline90.main;
 
 /**
  * The app is started from this class.
