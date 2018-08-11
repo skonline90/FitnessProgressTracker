@@ -36,8 +36,8 @@ public class NavigationBar extends VBox
         treeRoot.setExpanded(true);
         tiRegularExercise.setValue(TREE_REGULAR);
         tiEnduranceExercise.setValue(TREE_MACHINE);
-        tiMachineExercise.setValue(TREE_PAIN);
         tiPainExercise.setValue(TREE_ENDURANCE);
+        tiMachineExercise.setValue(TREE_PAIN);
         treeRoot.getChildren()
             .add(tiRegularExercise);
         treeRoot.getChildren()
